@@ -52,7 +52,7 @@ export default {
 
     async moveToStart(resource) {
       this.reorderLoading = true;
-      console.info(this, resource);
+
       try {
         await Nova.request().post(`/nova-vendor/nova-sortable/sort/${this.resourceName}/move-to-start`, {
           resourceId: resource.id.value,
