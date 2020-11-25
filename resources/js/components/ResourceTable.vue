@@ -32,7 +32,7 @@
       </tr>
     </thead>
 
-    <draggable v-model="resources" tag="tbody" handle=".handle" @update="updateOrder">
+    <draggable :list="resources" tag="tbody" handle=".handle" @update="updateOrder">
       <tr
         v-for="(resource, index) in resources"
         @actionExecuted="$emit('actionExecuted')"
